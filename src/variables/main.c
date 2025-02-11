@@ -6,7 +6,10 @@ int a = 10;
 int length = 0;
 
 /* const variable */
-const int b = 10;
+const int z = 10;
+
+/* extern variable from extern.c */
+extern int p;
 
 /* its wrong */
 /* char str = "hello"; */
@@ -15,7 +18,7 @@ const char str[] = "Hello"; /* the size of the string is determined by the compi
 /* OR */
 const char str2[] = {'H', 'e', 'l' , 'l', 'o', '\0'}; /* the '\0' is a null character*/
 
-const volatile unsigned char *port = 0x30;
+// const volatile unsigned char *port = 0x30;
 
 int funcInt () {
     /* the keyword 'auto' is not necessary */
@@ -59,8 +62,9 @@ int main() {
     // formatted output with printf() or accepting input with scanf().
     // printf("%d", funcInt()); // the '%d' is for a decimal integer (assumes base 10)
     
-    printf("%d\n", findChar("hello", 'w'));
-    printf("%s", str2);
+   // printf("%d\n", findChar("hello", 'w'));
+   // printf("%s\n", str2);
+    printf("%d", p);
 
     return 0;
 }
