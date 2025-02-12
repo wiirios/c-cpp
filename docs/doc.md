@@ -1,6 +1,7 @@
 Youtube content
 
 - [@dr-Jonas-Birch (channel)](https://www.youtube.com/@dr-Jonas-Birch)
+- [CodeVault](https://www.youtube.com/@CodeVault/videos)
 
 C doc
 
