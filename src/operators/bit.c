@@ -4,7 +4,8 @@
 int a, b, i, r;
 
 int sum(int n) {
-    return (-(~n));
+    // return (-(~n));
+    return n;
 }
 
 // https://www.geeksforgeeks.org/multiply-an-integer-with-3-5/
@@ -43,7 +44,7 @@ int main() {
 
     int r;
 
-    printf("%d\n", sum(25));
+    printf("%d\n", sum(100));
     printf("%d", multiply(2));
 
     return 0;
