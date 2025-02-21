@@ -9,6 +9,7 @@ C doc
 
 C standard library
 
+- [cplusplus](https://cplusplus.com/reference/clibrary/)
 - [wikipedia](https://en.wikipedia.org/wiki/C_standard_library)
 - [cppreference](https://en.cppreference.com/w/c/header)
 
