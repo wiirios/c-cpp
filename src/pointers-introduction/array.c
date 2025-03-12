@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define N 5
+
 int main() {
     int array[10], *p, *q, *u;
 
@@ -33,6 +35,19 @@ int main() {
     printf("%d\n", *u);
 
     u -= 2; /* array[4] */
+
+// ******* 262 chapter 12
+    int a[N] = {10, 20, 30, 40, 50};
+    int sum, *v;
+    sum = 0;
+    v = &a[0];
+
+    for (; v < &a[N]; v++) {
+        printf("%d\n", &a[*v]);
+        sum += *v;
+    }
+    printf("%d", sum);
+// *******
 
     return 0;
 }

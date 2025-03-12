@@ -36,6 +36,14 @@ void swap(int *c) {
     }
 }
 
+void swapAB(int *a, int *b) {
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 int sumall(int *c) {
     int result = 0;
     
@@ -74,7 +82,11 @@ int main() {
     // }
     // printf("%d", c[4]);
 
-    printf("%d", sumall(&c[0])); /* out 21 */
+    // printf("%d", sumall(&c[0])); /* out 21 */
+
+    swapAB(&a, &b);
+    printf("%d\n", a);
+    printf("%d", b);
 
     return 0;
 }
