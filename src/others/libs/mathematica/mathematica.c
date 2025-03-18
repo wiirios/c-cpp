@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 static long *sseed;
 bool hasSeed = false;
@@ -14,12 +15,14 @@ static int defaultSeeds[] = {
     0x7f, 0x1fc, 0x3f8, 0x1fc0, 0x1FBFF, 0x28A41, 0x28a410, 0xF3DC49
 };
 
+int ASCII[] = {48, 49, 50, 51, 52, 53, 54, 55, 56, 57};
+
 void fatal(char *msg) {
     printf("Error: %s\n", msg);
     exit(EXIT_FAILURE);
 }
 
-/* well.. */
+/* this does what you think it does */
 
 int max(int a, int b) {
     return (a > b) ? a : b;
@@ -30,7 +33,6 @@ int min(int a, int b) {
 }
 
 /* 1 for true and 0 for false */
-
 int isgreater(int a, int b) {
     return (a > b) ? true : false;
 }
@@ -47,18 +49,54 @@ int islessorequal(int a, int b) {
     return (a <= b) ? true : false;
 }
 
-// int reverse(int a[]) {
+/* reverse the number ,; */
+int reverse(int num) {
+    int r = 0;
 
+    while (num > 0) {
+        r = r * 10 + num % 10;
+        num = num / 10;
+    }
 
-//     return 0;
-// }
+    return r;
+}
 
+/* exponent cal */
 double pow(double a, double b) {
     int c = a;
 
     for (int i = 1; i < b; i++) a *= c;
 
     return a;
+}
+
+/*
+    converts the given char to integer. (if in the char has a char this shit broke)
+*/
+int valueof(const char *ch) {
+    int hasN = 0;
+    int n1;
+    
+    while (*ch) {
+        int chInt = *ch; /* 49 == 1 */
+        
+        for (int i = 0; i < 11; i++) {
+            if (*ch < 48 || *ch > 57) fatal("Invalid char");            
+            else if (chInt == ASCII[i]) { /*ch 49 == tableACII[0] 49 / 1 */
+                if (hasN == 0) {
+                    n1 = i;
+                    hasN = 1;
+                } else if (hasN == 1) {
+                    int factor = (int) pow(10, (int) log10(i) + 1); 
+                    n1 = (n1 * factor) + i;
+                }
+            }
+        }
+
+        *ch++;
+    }
+
+    return n1;
 }
 
 double root(const double a) {

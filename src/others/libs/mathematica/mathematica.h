@@ -13,8 +13,8 @@ int random(void);
 int isgreaterorequal(int a, int b);
 // int isless(int a, int b);
 int islessorequal(int a, int b);
-// int reverse(int a);
-// int valueof(char *ch);
+int reverse(int num);
+int valueof(const char *ch);
 
 void setSeed(long seed);
 void removeSeed(void);
