@@ -78,11 +78,11 @@ int valueof(const char *ch) {
     int n1;
     
     while (*ch) {
-        int chInt = *ch; /* 49 == 1 */
+        int chInt = *ch;
         
         for (int i = 0; i < 11; i++) {
             if (*ch < 48 || *ch > 57) fatal("Invalid char");            
-            else if (chInt == ASCII[i]) { /*ch 49 == tableACII[0] 49 / 1 */
+            else if (chInt == ASCII[i]) { 
                 if (hasN == 0) {
                     n1 = i;
                     hasN = 1;
