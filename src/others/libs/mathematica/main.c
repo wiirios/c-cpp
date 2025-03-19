@@ -18,6 +18,11 @@ int main() {
    int sumAfterValueOf = valueof(&ch[0]);
 
    printf("%d\n", sumAfterValueOf + 1);
+   printf("%d\n", sum(3, 1, 2, 3));
+
+   printf("%d\n", num);
+   reverse_num(&num);
+   printf("%d\n", num);
 
    removeSeed();
 

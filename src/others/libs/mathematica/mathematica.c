@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <stdarg.h>
 
 static long *sseed;
 bool hasSeed = false;
@@ -22,6 +23,22 @@ void fatal(char *msg) {
     exit(EXIT_FAILURE);
 }
 
+/*
+
+*/
+int sum(int count, ...) {
+    va_list args;
+    va_start(args, count);
+
+    int total = 0;
+
+    for (int i = 0; i < count; i++) total += va_arg(args, int);
+    
+    va_end(args);
+
+    return total;
+}
+
 /* this does what you think it does */
 
 int max(int a, int b) {
@@ -33,7 +50,7 @@ int min(int a, int b) {
 }
 
 /* 1 for true and 0 for false */
-int isgreater(int a, int b) {
+int is_greater(int a, int b) {
     return (a > b) ? true : false;
 }
 
@@ -41,7 +58,7 @@ int isgreaterorequal(int a, int b) {
     return (a >= b) ? true : false;
 }
 
-int isless(int a, int b) {
+int is_less(int a, int b) {
     return (a < b) ? true : false;
 }
 
@@ -59,6 +76,19 @@ int reverse(int num) {
     }
 
     return r;
+}
+/*
+    reverse the number in memory
+*/
+void reverse_num(int* num) {
+    int r = 0;
+
+    while (*num > 0) {
+        r = r * 10 + *num % 10;
+        *num = *num / 10;
+    }
+
+    *num = r;
 }
 
 /* exponent cal */
@@ -81,7 +111,7 @@ int valueof(const char *ch) {
         int chInt = *ch;
         
         for (int i = 0; i < 11; i++) {
-            if (*ch < 48 || *ch > 57) fatal("Invalid char");            
+            if (*ch < 48 || *ch > 57) fatal("Invalid char");
             else if (chInt == ASCII[i]) { 
                 if (hasN == 0) {
                     n1 = i;

@@ -6,6 +6,7 @@
 double pow(double a, double b);
 double root(double a);
 
+int sum(int count, ...);
 int max(int a, int b);
 int min(int a, int b);
 int random(void);
@@ -19,5 +20,6 @@ int valueof(const char *ch);
 void setSeed(long seed);
 void removeSeed(void);
 void fatal(char *msg);
+void reverse_num(int* num);
 
 #endif
