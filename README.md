@@ -1,5 +1,5 @@
-# My C/CPP Codes
-My repository containing my programs made in C/CPP.
+# My c/c++ Codes
+My repository containing my programs made in c/c++.
 
 ## Getting Started
 ### Installation
@@ -9,7 +9,7 @@ My repository containing my programs made in C/CPP.
 2. Clone this repository
 
 ```bash
-git clone https://github.com/Winnd11/C
+git clone https://github.com/wiirios/c-cpp
 ```
 ## MIT License
 This project is licensed under MIT license, read more at <span><a href="https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">docs.github</span>
