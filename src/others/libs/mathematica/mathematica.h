@@ -20,6 +20,8 @@ int reverse(int num);
 int valueof(const char *ch);
 int bitcount(unsigned int a);
 
+// char tochar(int a);
+
 void setSeed(long seed);
 void removeSeed(void);
 void fatal(char *msg);
