@@ -3,12 +3,13 @@
 
 int main() {
    int num = 399948;
+   unsigned int a = 10;
+   unsigned int b = 2;
    const char ch[] = "1234";
 
    srand(time(NULL));
    long seed = rand() % 100 + 1;
 
-   // printf("%d\n", seed);
    setSeed(seed);
 
    printf("%1.2f\n", pow(1, 457));
@@ -23,6 +24,10 @@ int main() {
    printf("%d\n", num);
    reverse_num(&num);
    printf("%d\n", num);
+   printf("%d\n", divide(a, b));
+   printf("%d\n", remainder_(a, b));
+
+   printf("%d\n", bitcount(a));
 
    removeSeed();
 

@@ -39,6 +39,14 @@ int sum(int count, ...) {
     return total;
 }
 
+int divide(unsigned int a, unsigned int b) {
+    return a / b;
+}
+
+int remainder_(unsigned int a, unsigned int b) {
+    return a % b;
+}
+
 /* this does what you think it does */
 
 int max(int a, int b) {
@@ -127,6 +135,24 @@ int valueof(const char *ch) {
     }
 
     return n1;
+}
+
+int bitcount(unsigned int a) {
+    if (a == 1) return 1;
+    if (a == 0) return 0;
+
+    int count = 0;
+    int b = 0;
+
+    for (; a > 0;) {
+        b = a & 1;
+        if (b == 1) count++;
+
+        a = a >> 1;
+
+    }
+
+    return count;
 }
 
 double root(const double a) {
