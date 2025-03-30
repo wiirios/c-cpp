@@ -1,5 +1,5 @@
-# My c/c++ Codes
-My repository containing my programs made in c/c++.
+# My c/cpp Codes
+My repository containing my programs made in c/cpp.
 
 ## Getting Started
 ### Installation
