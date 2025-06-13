@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main() {
-    int *x;
+    char *x;
 
-    x = malloc(sizeof(int));
+    x = malloc(sizeof(char));
 
     if (x != NULL) printf("success!\n");
     else printf("error\n");
 
-    *x = 30;
-    printf("%d\n", *x);
+    strcpy(x, "Hello");    
+    printf("%s\n", x);
 
     free(x);
     return 0;

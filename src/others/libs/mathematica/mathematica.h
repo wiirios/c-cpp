@@ -19,6 +19,10 @@ int islessorequal(int a, int b);
 int reverse(int num);
 int valueof(const char *ch);
 int bitcount(unsigned int a);
+int abs_(int a);
+int negate(int a);
+int rotate_left(int a, int distance);
+int rotate_right(int a, int distance);
 
 // char tochar(int a);
 

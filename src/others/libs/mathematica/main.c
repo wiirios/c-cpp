@@ -29,6 +29,8 @@ int main() {
 
    printf("%d\n", bitcount(a));
 
+   printf("%d\n", abs_(-10));
+   printf("%d\n", negate(28));
    removeSeed();
 
    return 0;

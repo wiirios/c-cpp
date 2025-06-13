@@ -223,3 +223,27 @@ long random() {
 
     return (a < 0) ? -(a) : a;    
 }
+
+int abs_(int a) {
+    if (a == 0) return a;
+    
+    if (a > 0) return a;
+
+    return a * -1;
+}
+
+int negate(int a) {
+    if (a == 0) return a;
+
+    if (a < 0) return a;
+
+    return a * -1;
+}
+
+int rotate_left(int a, int distance) {
+    return a << distance;
+}
+
+int rotate_right(int a, int distance) {
+    return a >> distance;
+}
