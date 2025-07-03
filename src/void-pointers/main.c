@@ -26,6 +26,8 @@ void print_value(void *ptr, char type) {
     }
 }
 
+
+
 int main() {
     int x = 10;
     int a = 10;
@@ -68,6 +70,7 @@ int main() {
     Here, 'malloc' allocates enough memory for 10 integers, and the 'void *' it returns is
     cast to 'int *' to be used as a pointer to integers.
     */
+
 
     return 0;
 }
