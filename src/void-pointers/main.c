@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void *max(void *a, void *b) {
     if (a > b) return a;
@@ -8,6 +9,40 @@ void *max(void *a, void *b) {
 
 void *echo(void *data) {
     return data;
+}
+
+typedef enum {
+    TY_CHAR,
+    TY_INT,
+    TY_UNSL
+} type_t;
+
+typedef struct stack
+{
+    void *data;
+    size_t size;
+    type_t type;
+} stack_t;
+
+stack_t *create(size_t size, type_t type) {
+    stack_t *stack;
+    size_t size_ = 0;
+
+    if (type == TY_CHAR) size_ = size * sizeof(char);
+    else if (type == TY_UNSL) size_= size * sizeof(unsigned long long);
+    else size_ = size * sizeof(int);
+
+    // stack = (stack_t*) malloc(sizeof(stack_t));
+    stack->data = malloc(sizeof(size_));
+    stack->size = size;
+    return stack;
+}
+
+void add(stack_t *stack, void *data) {
+
+    // if (stack->type == TY_INT) (
+
+    // stack->data[0] = data;
 }
 
 void print_value(void *ptr, char type) {
@@ -69,5 +104,48 @@ int main() {
     cast to 'int *' to be used as a pointer to integers.
     */
 
+    printf("Size of int: %d\n", sizeof(int)); // 4
+    printf("Size of char: %d\n", sizeof(char)); // 1
+
+    stack_t *stack;
+
+    /* 
+        casting! 
+        int = (int *)
+        char = (char *)
+
+        ...
+    */
+    stack = create(10, TY_CHAR);
+    /* oh */
+    // ((int*) stack->data)[0] = 1;
+
+    ((char*) stack->data)[0] = 'A';
+    ((char*) stack->data)[1] = 'B';
+    ((char*) stack->data)[2] = 'C';
+
+    // ((int*) stack->data)[1] = 5;
+
+    // printf("%d\n", ((int*) stack->data)[0]);
+    // printf("%d\n", ((int*) stack->data)[1]);
+
+    for (int i = 0 ; i < stack->size; i++) printf("%c\n", ((char*) stack->data)[i]);
+
+    printf("%d\n", sizeof(unsigned long long));
+
+    stack_t *stack_2;
+    stack_2 = create(3, TY_INT);
+    
+    ((int*) stack->data)[0] = 900;
+    ((int*) stack->data)[1] = 500;
+    ((int*) stack->data)[2] = 200;
+
+    for (int i = 0 ; i < stack_2->size; i++) printf("%d\n", ((int*) stack_2->data)[i]);
+
+    free(stack);
+    free(stack->data);
+
+    free(stack_2);
+    free(stack_2->data);
     return 0;
 }
