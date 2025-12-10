@@ -1,3 +1,0 @@
-C:/Users/William/Desktop/William/c-lang/test/build/CMakeFiles/c.dir
-C:/Users/William/Desktop/William/c-lang/test/build/CMakeFiles/edit_cache.dir
-C:/Users/William/Desktop/William/c-lang/test/build/CMakeFiles/rebuild_cache.dir
